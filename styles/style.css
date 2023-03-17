@@ -2,7 +2,7 @@
 
 :root{
     --cor--primaria:#000000;
-    --cor-secundaria: #F6F6F6;
+    --cor--secundaria: #F6F6F6;
     --cor--terciaria: #22D4FD;
     --cor--hoover:#272727;
 
@@ -23,15 +23,29 @@
 body{
 
     background-color: var(--cor--primaria);
-    color:var(--cor-secundaria);
+    color:var(--cor--secundaria);
     box-sizing: border-box;
-    overflow-y:hidden;
     
+    transition: background 1s;
+
+    --cor--primaria:#000000;
+    --cor--secundaria: #F6F6F6;
+    --cor--terciaria: #22D4FD;
+    --cor--hoover:#272727;
+
 }
 
 body.light{
     background-color: var(--cor--light1);
+    color:black;
+    --cor--primaria:#ffffff;
+    --cor--secundaria: #000000;
+    --cor--terciaria: #22D4FD;
+    --cor--hoover:#c7c7c7;
+
 }
+
+
 
 .checkbox{
     opacity: 100%;
@@ -50,9 +64,9 @@ body.light{
     padding: 5px;
     position: relative;
     height: 26px;
-    width: 50px;
+    width: 54px;
 
-    transform: scale(1.24);
+    transform: scale(1.2);
 }
 
 .label .bola{
@@ -71,7 +85,7 @@ body.light{
 }
 
 .checkbox:checked + .label .bola{
-    transform: translateX(24px) ;
+    transform: translateX(30px) ;
 
 
 }
@@ -104,7 +118,7 @@ body.light{
 }
 
 .titulo-destaque{
-    color: var(--cor--azul--claro);
+    color: var(--cor--terciaria);
 }
 
 .apresentacao{
@@ -152,7 +166,7 @@ body.light{
     gap: 1rem;
     font-family: 'Montserrat', sans-serif ;
     font-size: 1.3rem;
-    border: 0.15rem solid var(--cor--azul--claro);
+    border: 0.15rem solid var(--cor--terciaria);
     border-radius: 0.5rem;
     width: 20rem;
     font-weight: 600;
@@ -160,30 +174,16 @@ body.light{
     text-decoration: none;
     border-radius: 1rem;
     padding: 1.1rem 0;
-    color: #F6F6F6;
+    color: var(--cor--secundaria);
 }
 
-.apresentacao__links__redes.light{
-    /* background-color: #22D4FD; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-family: 'Montserrat', sans-serif ;
-    font-size: 1.3rem;
-    border: 0.15rem solid var(--cor--azul--claro);
-    border-radius: 0.5rem;
-    width: 20rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 1rem;
-    padding: 1.1rem 0;
-    color: var(--cor--secundaria--light);
-}
 
 .apresentacao__links__redes:hover{
-    background-color: #272727;
+    background-color: var(--cor--hoover);
+}
+
+.apresentacao__links__redes.letra{
+    color: var(--cor--primaria);
 }
 
 .apresentacao__imagem{
@@ -212,12 +212,10 @@ body.light{
 }
 
 .rodape{
-    background-color: var(--cor--azul--claro);
+    background-color: var(--cor--terciaria);
     color:var(--cor--preta);
     padding: 1.25rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif ;
     font-weight: 400;
-    
-  
 }
